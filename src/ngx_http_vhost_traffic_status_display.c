@@ -10,7 +10,9 @@
 #include "ngx_http_vhost_traffic_status_filter.h"
 #include "ngx_http_vhost_traffic_status_display.h"
 #include "ngx_http_vhost_traffic_status_control.h"
-
+#if (NGX_HTTP_UPSTREAM_CHECK)
+#include "ngx_http_upstream_check_module.h"
+#endif
 
 static ngx_int_t ngx_http_vhost_traffic_status_display_handler(ngx_http_request_t *r);
 static ngx_int_t ngx_http_vhost_traffic_status_display_handler_control(ngx_http_request_t *r);
@@ -1114,8 +1116,15 @@ ngx_http_vhost_traffic_status_display_set_upstream_group(ngx_http_request_t *r,
                 usn.max_fails = peer->max_fails;
                 usn.fail_timeout = peer->fail_timeout;
                 usn.backup = 0;
+#if (NGX_HTTP_UPSTREAM_CHECK)
+                if (ngx_http_upstream_check_peer_down(peer->check_index)) {
+                    usn.down = 1;
+                } else {
+                    usn.down = 0;
+                }
+#else
                 usn.down = peer->down;
-
+#endif
 #if nginx_version > 1007001
                 usn.name = peer->name;
 #endif
