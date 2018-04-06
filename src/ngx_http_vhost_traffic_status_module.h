@@ -84,8 +84,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
     "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA,"                                                             \
     "\"miss\":%uA,"                                                            \
     "\"bypass\":%uA,"                                                          \
     "\"expired\":%uA,"                                                         \
@@ -108,8 +121,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
     "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA,"                                                             \
     "\"miss\":%uA,"                                                            \
     "\"bypass\":%uA,"                                                          \
     "\"expired\":%uA,"                                                         \
@@ -129,8 +155,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
-    "\"5xx\":%uA"                                                              \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
+    "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA"                                                              \
     "},"                                                                       \
     "\"requestMsec\":%M,"                                                      \
     "\"requestMsecs\":{"                                                       \
@@ -145,8 +184,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
-    "\"5xx\":%uA"                                                              \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
+    "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA"                                                              \
     "}"                                                                        \
     "},"
 #endif
@@ -162,8 +214,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
-    "\"5xx\":%uA"                                                              \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
+    "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA"                                                              \
     "},"                                                                       \
     "\"requestMsec\":%M,"                                                      \
     "\"requestMsecs\":{"                                                       \
@@ -188,8 +253,21 @@
     "\"1xx\":%uA,"                                                             \
     "\"2xx\":%uA,"                                                             \
     "\"3xx\":%uA,"                                                             \
+    "\"301\":%uA,"                                                             \
+    "\"302\":%uA,"                                                             \
     "\"4xx\":%uA,"                                                             \
-    "\"5xx\":%uA"                                                              \
+    "\"400\":%uA,"                                                             \
+    "\"401\":%uA,"                                                             \
+    "\"403\":%uA,"                                                             \
+    "\"404\":%uA,"                                                             \
+    "\"429\":%uA,"                                                             \
+    "\"499\":%uA,"                                                             \
+    "\"5xx\":%uA,"                                                             \
+    "\"500\":%uA,"                                                             \
+    "\"501\":%uA,"                                                             \
+    "\"502\":%uA,"                                                             \
+    "\"503\":%uA,"                                                             \
+    "\"504\":%uA"                                                              \
     "}"                                                                        \
     "},"
 
@@ -229,9 +307,27 @@
 #define ngx_http_vhost_traffic_status_add_rc(s, n) {                           \
     if(s < 200) {n->stat_1xx_counter++;}                                       \
     else if(s < 300) {n->stat_2xx_counter++;}                                  \
-    else if(s < 400) {n->stat_3xx_counter++;}                                  \
-    else if(s < 500) {n->stat_4xx_counter++;}                                  \
-    else {n->stat_5xx_counter++;}                                              \
+    else if(s < 400) {                                                         \
+        n->stat_3xx_counter++;                                                 \
+        if (s == 301) { n->stat_301_counter++;}                                \
+        if (s == 302) { n->stat_302_counter++;}                                \
+    }                                                                          \
+    else if(s < 500) {                                                         \
+        n->stat_4xx_counter++;                                                 \
+        if (s == 400) { n->stat_400_counter++;}                                \
+        if (s == 401) { n->stat_401_counter++;}                                \
+        if (s == 403) { n->stat_403_counter++;}                                \
+        if (s == 404) { n->stat_404_counter++;}                                \
+        if (s == 429) { n->stat_429_counter++;}                                \
+        if (s == 499) { n->stat_499_counter++;}                                \
+    } else {                                                                   \
+        n->stat_5xx_counter++;                                                 \
+        if (s == 500) { n->stat_500_counter++;}                                \
+        if (s == 501) { n->stat_501_counter++;}                                \
+        if (s == 502) { n->stat_502_counter++;}                                \
+        if (s == 503) { n->stat_503_counter++;}                                \
+        if (s == 504) { n->stat_504_counter++;}                                \
+    }                                                                          \
 }
 
 #if (NGX_HTTP_CACHE)
@@ -297,11 +393,50 @@
     if (o->stat_3xx_counter > c->stat_3xx_counter) {                           \
         c->stat_3xx_counter_oc++;                                              \
     }                                                                          \
+    if (o->stat_301_counter > c->stat_301_counter) {                           \
+        c->stat_301_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_302_counter > c->stat_302_counter) {                           \
+        c->stat_302_counter_oc++;                                              \
+    }                                                                          \
     if (o->stat_4xx_counter > c->stat_4xx_counter) {                           \
         c->stat_4xx_counter_oc++;                                              \
     }                                                                          \
+    if (o->stat_400_counter > c->stat_400_counter) {                           \
+        c->stat_400_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_401_counter > c->stat_401_counter) {                           \
+        c->stat_401_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_403_counter > c->stat_403_counter) {                           \
+        c->stat_403_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_404_counter > c->stat_404_counter) {                           \
+        c->stat_404_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_429_counter > c->stat_429_counter) {                           \
+        c->stat_429_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_499_counter > c->stat_499_counter) {                           \
+        c->stat_499_counter_oc++;                                              \
+    }                                                                          \
     if (o->stat_5xx_counter > c->stat_5xx_counter) {                           \
         c->stat_5xx_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_500_counter > c->stat_500_counter) {                           \
+        c->stat_500_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_501_counter > c->stat_501_counter) {                           \
+        c->stat_501_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_502_counter > c->stat_502_counter) {                           \
+        c->stat_502_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_503_counter > c->stat_503_counter) {                           \
+        c->stat_503_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_504_counter > c->stat_504_counter) {                           \
+        c->stat_504_counter_oc++;                                              \
     }                                                                          \
     if (o->stat_cache_miss_counter > c->stat_cache_miss_counter) {             \
         c->stat_cache_miss_counter_oc++;                                       \
@@ -349,11 +484,50 @@
     if (o->stat_3xx_counter > c->stat_3xx_counter) {                           \
         c->stat_3xx_counter_oc++;                                              \
     }                                                                          \
+    if (o->stat_301_counter > c->stat_301_counter) {                           \
+        c->stat_301_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_302_counter > c->stat_302_counter) {                           \
+        c->stat_302_counter_oc++;                                              \
+    }                                                                          \
     if (o->stat_4xx_counter > c->stat_4xx_counter) {                           \
         c->stat_4xx_counter_oc++;                                              \
     }                                                                          \
+    if (o->stat_400_counter > c->stat_400_counter) {                           \
+        c->stat_400_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_401_counter > c->stat_401_counter) {                           \
+        c->stat_401_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_403_counter > c->stat_403_counter) {                           \
+        c->stat_403_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_404_counter > c->stat_404_counter) {                           \
+        c->stat_404_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_429_counter > c->stat_429_counter) {                           \
+        c->stat_429_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_499_counter > c->stat_499_counter) {                           \
+        c->stat_499_counter_oc++;                                              \
+    }                                                                          \
     if (o->stat_5xx_counter > c->stat_5xx_counter) {                           \
         c->stat_5xx_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_500_counter > c->stat_500_counter) {                           \
+        c->stat_500_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_501_counter > c->stat_501_counter) {                           \
+        c->stat_501_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_502_counter > c->stat_502_counter) {                           \
+        c->stat_502_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_503_counter > c->stat_503_counter) {                           \
+        c->stat_503_counter_oc++;                                              \
+    }                                                                          \
+    if (o->stat_504_counter > c->stat_504_counter) {                           \
+        c->stat_504_counter_oc++;                                              \
     }                                                                          \
 }
 #endif

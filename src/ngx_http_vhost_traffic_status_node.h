@@ -41,8 +41,21 @@ typedef struct {
     ngx_atomic_t                                     stat_1xx_counter;
     ngx_atomic_t                                     stat_2xx_counter;
     ngx_atomic_t                                     stat_3xx_counter;
+    ngx_atomic_t                                     stat_301_counter;
+    ngx_atomic_t                                     stat_302_counter;
     ngx_atomic_t                                     stat_4xx_counter;
+    ngx_atomic_t                                     stat_400_counter;
+    ngx_atomic_t                                     stat_401_counter;
+    ngx_atomic_t                                     stat_403_counter;
+    ngx_atomic_t                                     stat_404_counter;
+    ngx_atomic_t                                     stat_429_counter;
+    ngx_atomic_t                                     stat_499_counter;
     ngx_atomic_t                                     stat_5xx_counter;
+    ngx_atomic_t                                     stat_500_counter;
+    ngx_atomic_t                                     stat_501_counter;
+    ngx_atomic_t                                     stat_502_counter;
+    ngx_atomic_t                                     stat_503_counter;
+    ngx_atomic_t                                     stat_504_counter;
 
     ngx_msec_t                                       stat_request_time;
     ngx_http_vhost_traffic_status_node_time_queue_t  stat_request_times;
@@ -54,8 +67,21 @@ typedef struct {
     ngx_atomic_t                                     stat_1xx_counter_oc;
     ngx_atomic_t                                     stat_2xx_counter_oc;
     ngx_atomic_t                                     stat_3xx_counter_oc;
+    ngx_atomic_t                                     stat_301_counter_oc;
+    ngx_atomic_t                                     stat_302_counter_oc;
     ngx_atomic_t                                     stat_4xx_counter_oc;
+    ngx_atomic_t                                     stat_400_counter_oc;
+    ngx_atomic_t                                     stat_401_counter_oc;
+    ngx_atomic_t                                     stat_403_counter_oc;
+    ngx_atomic_t                                     stat_404_counter_oc;
+    ngx_atomic_t                                     stat_429_counter_oc;
+    ngx_atomic_t                                     stat_499_counter_oc;
     ngx_atomic_t                                     stat_5xx_counter_oc;
+    ngx_atomic_t                                     stat_500_counter_oc;
+    ngx_atomic_t                                     stat_501_counter_oc;
+    ngx_atomic_t                                     stat_502_counter_oc;
+    ngx_atomic_t                                     stat_503_counter_oc;
+    ngx_atomic_t                                     stat_504_counter_oc;
 
 #if (NGX_HTTP_CACHE)
     ngx_atomic_t                                     stat_cache_max_size;

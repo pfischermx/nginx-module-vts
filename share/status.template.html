@@ -526,7 +526,10 @@
                     heads[0] = '{}{}'.format(heads[0], aHe('th colspan="9"', 'Cache'));
                 }
 
-                heads[1] = aHe('th', ['Total', 'Req/s', 'Time', '1xx', '2xx', '3xx', '4xx', '5xx',
+                heads[1] = aHe('th', ['Total', 'Req/s', 'Time', '1xx', '2xx',
+                                    '3xx', '301', '302',
+                                    '4xx', '400', '401', '403', '404', '429', '499',
+                                    '5xx', '500', '501', '502', '503', '504',
                                       'Total', 'Sent', 'Rcvd', 'Sent/s', 'Rcvd/s']);
 
                 if (cache) {
@@ -551,8 +554,11 @@
                                                        aHe('th colspan="6"', 'Responses'),
                                                        aHe('th colspan="4"', 'Traffic'));
 
-                heads[1] = aHe('th', ['Total', 'Req/s', 'Time', '1xx', '2xx', '3xx', '4xx', '5xx',
-                                      'Total', 'Sent', 'Rcvd', 'Sent/s', 'Rcvd/s']);
+                heads[1] = aHe('th', ['Total', 'Req/s', 'Time', '1xx', '2xx',
+                                    '3xx', '301', '302',
+                                    '4xx', '400', '401', '403', '404', '429', '499',
+                                    '5xx', '500', '501', '502', '503', '504',
+                                    'Total', 'Sent', 'Rcvd', 'Sent/s', 'Rcvd/s']);
 
                 return aHe('thead', '{}{}'.format(aHe('tr', heads[0]), aHe('tr', heads[1])));
             }

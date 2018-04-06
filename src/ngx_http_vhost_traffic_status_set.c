@@ -117,13 +117,65 @@ ngx_http_vhost_traffic_status_set_by_filter_node_member(
     {
         return vtsn->stat_3xx_counter;
     }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "301") == 0)
+    {
+        return vtsn->stat_301_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "302") == 0)
+    {
+        return vtsn->stat_302_counter;
+    }
     else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "4xx") == 0)
     {
         return vtsn->stat_4xx_counter;
     }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "400") == 0)
+    {
+        return vtsn->stat_400_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "401") == 0)
+    {
+        return vtsn->stat_401_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "403") == 0)
+    {
+        return vtsn->stat_403_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "404") == 0)
+    {
+        return vtsn->stat_404_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "429") == 0)
+    {
+        return vtsn->stat_429_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "499") == 0)
+    {
+        return vtsn->stat_499_counter;
+    }
     else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "5xx") == 0)
     {
         return vtsn->stat_5xx_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "500") == 0)
+    {
+        return vtsn->stat_500_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "501") == 0)
+    {
+        return vtsn->stat_501_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "502") == 0)
+    {
+        return vtsn->stat_502_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "503") == 0)
+    {
+        return vtsn->stat_503_counter;
+    }
+    else if (ngx_http_vhost_traffic_status_node_member_cmp(member, "504") == 0)
+    {
+        return vtsn->stat_504_counter;
     }
 
 #if (NGX_HTTP_CACHE)
