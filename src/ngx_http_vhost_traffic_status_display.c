@@ -186,8 +186,6 @@ ngx_http_vhost_traffic_status_display_handler_control(ngx_http_request_t *r)
 
         ngx_http_vhost_traffic_status_node_control_range_set(control);
     }
-            ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
-                          "BEFORE display_handler_control::display_get_size() failed");
 
     if (control->command == NGX_HTTP_VHOST_TRAFFIC_STATUS_CONTROL_CMD_STATUS) {
         size = ngx_http_vhost_traffic_status_display_get_size(r,
@@ -381,8 +379,6 @@ ngx_http_vhost_traffic_status_display_handler_default(ngx_http_request_t *r)
             return rc;
         }
     }
-            ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
-                          "BEFORE2 display_handler_control::display_get_size()");
 
     size = ngx_http_vhost_traffic_status_display_get_size(r, format);
     if (size == NGX_ERROR) {
@@ -390,15 +386,11 @@ ngx_http_vhost_traffic_status_display_handler_default(ngx_http_request_t *r)
                       "display_handler_default::display_get_size() failed");
         return NGX_HTTP_INTERNAL_SERVER_ERROR;
     }
-            ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
-                          "Creating tmp_buffer()");
 
     b = ngx_create_temp_buf(r->pool, size);
     if (b == NULL) {
         return NGX_HTTP_INTERNAL_SERVER_ERROR;
     }
-            ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
-                          "CreatED tmp_buffer()");
 
     if (format == NGX_HTTP_VHOST_TRAFFIC_STATUS_FORMAT_JSON) {
         shpool = (ngx_slab_pool_t *) vtscf->shm_zone->shm.addr;
@@ -1073,9 +1065,30 @@ ngx_http_vhost_traffic_status_display_set_upstream_node(ngx_http_request_t *r,
         buf = ngx_sprintf(buf, NGX_HTTP_VHOST_TRAFFIC_STATUS_JSON_FMT_UPSTREAM,
                 &key, (ngx_atomic_uint_t) 0,
                 (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0,
+                /* Initialize status for HTTP codes */
+                /* 1xx */
+                (ngx_atomic_uint_t) 0, // 1xx
+                /* 2xx */
+                (ngx_atomic_uint_t) 0, // 2xx
+                /* 3xx */
+                (ngx_atomic_uint_t) 0, // 3xx
+                (ngx_atomic_uint_t) 0, // 301
+                (ngx_atomic_uint_t) 0, // 302
+                /* 4xx */
+                (ngx_atomic_uint_t) 0, // 4xx
+                (ngx_atomic_uint_t) 0, // 400
+                (ngx_atomic_uint_t) 0, // 401
+                (ngx_atomic_uint_t) 0, // 403
+                (ngx_atomic_uint_t) 0, // 404
+                (ngx_atomic_uint_t) 0, // 429
+                (ngx_atomic_uint_t) 0, // 499
+                /* 5xx */
+                (ngx_atomic_uint_t) 0, // 5xx
+                (ngx_atomic_uint_t) 0, // 500
+                (ngx_atomic_uint_t) 0, // 501
+                (ngx_atomic_uint_t) 0, // 502
+                (ngx_atomic_uint_t) 0, // 503
+                (ngx_atomic_uint_t) 0, // 504
                 (ngx_msec_t) 0,
                 (u_char *) "", (u_char *) "",
                 (ngx_msec_t) 0,
@@ -1086,9 +1099,32 @@ ngx_http_vhost_traffic_status_display_set_upstream_node(ngx_http_request_t *r,
                 ngx_http_vhost_traffic_status_boolean_to_string(us->down),
                 ngx_http_vhost_traffic_status_max_integer,
                 (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0,
-                (ngx_atomic_uint_t) 0, (ngx_atomic_uint_t) 0);
+                (ngx_atomic_uint_t) 0,
+                /* Initialize status for HTTP codes, _oc ones */
+                /* 1xx */
+                (ngx_atomic_uint_t) 0, // 1xx
+                /* 2xx */
+                (ngx_atomic_uint_t) 0, // 2xx
+                /* 3xx */
+                (ngx_atomic_uint_t) 0, // 3xx
+                (ngx_atomic_uint_t) 0, // 301
+                (ngx_atomic_uint_t) 0, // 302
+                /* 4xx */
+                (ngx_atomic_uint_t) 0, // 4xx
+                (ngx_atomic_uint_t) 0, // 400
+                (ngx_atomic_uint_t) 0, // 401
+                (ngx_atomic_uint_t) 0, // 403
+                (ngx_atomic_uint_t) 0, // 404
+                (ngx_atomic_uint_t) 0, // 429
+                (ngx_atomic_uint_t) 0, // 499
+                /* 5xx */
+                (ngx_atomic_uint_t) 0, // 5xx
+                (ngx_atomic_uint_t) 0, // 500
+                (ngx_atomic_uint_t) 0, // 501
+                (ngx_atomic_uint_t) 0, // 502
+                (ngx_atomic_uint_t) 0, // 503
+                (ngx_atomic_uint_t) 0  // 504
+                );
     }
 
     return buf;
@@ -1259,6 +1295,7 @@ ngx_http_vhost_traffic_status_display_set_upstream_group(ngx_http_request_t *r,
                     buf = ngx_http_vhost_traffic_status_display_set_upstream_node(r, buf, &usn, NULL, &peer->name);
 #endif
                 }
+
 
                 p = dst.data;
             }
@@ -1506,6 +1543,7 @@ ngx_http_vhost_traffic_status_display_set(ngx_http_request_t *r,
     buf = ngx_sprintf(buf, NGX_HTTP_VHOST_TRAFFIC_STATUS_JSON_FMT_UPSTREAM_S);
 
     s = buf;
+
 
     buf = ngx_http_vhost_traffic_status_display_set_upstream_group(r, buf);
 
